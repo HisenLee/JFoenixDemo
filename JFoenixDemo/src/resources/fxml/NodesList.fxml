@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml">
+
+    <children>
+    <JFXNodesList fx:id="nodesList" rotate="180.0" spacing="15"
+                  StackPane.alignment="BOTTOM_RIGHT">
+        <children>
+            <JFXButton fx:id="newButton" contentDisplay="GRAPHIC_ONLY"
+                       styleClass="main-button">
+                <graphic>
+                    <FontAwesomeIconView glyphName="PLUS" size="24" styleClass="main-icon"/>
+                </graphic>
+            </JFXButton>
+            <JFXButton fx:id="fileButton" contentDisplay="GRAPHIC_ONLY" onAction="#onNewFile" styleClass="animated-option-button">
+                <graphic>
+                    <FontAwesomeIconView glyphName="FILE_TEXT" size="24"
+                                         styleClass="sub-icon" />
+                </graphic>
+            </JFXButton>
+            <JFXButton fx:id="commentButton" contentDisplay="GRAPHIC_ONLY" onAction="#onNewComment" styleClass="animated-option-button">
+                <graphic>
+                    <FontAwesomeIconView glyphName="COMMENT" size="24" styleClass="sub-icon" />
+                </graphic>
+            </JFXButton>
+            <JFXButton fx:id="filterButton" contentDisplay="GRAPHIC_ONLY" onAction="#onNewFilter" styleClass="animated-option-button">
+                <graphic>
+                    <FontAwesomeIconView glyphName="FILTER" size="24" styleClass="sub-icon" />
+                </graphic>
+            </JFXButton>
+        </children>
+        <StackPane.margin>
+            <Insets bottom="50.0" right="50.0" />
+        </StackPane.margin>
+    </JFXNodesList>
+
+</children>
+
+</StackPane>

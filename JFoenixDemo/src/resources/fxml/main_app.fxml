@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<!-- 边框面板布局：分为上下左右中的部分结构-->
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import java.lang.String?>
+<?import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="root"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <!-- 顶部是一个JFXToolbar，
+            因为JFXToolbar不能直接设置spacing,
+            所以外层包裹一个VBox即可
+        -->
+        <VBox spacing="20">
+            <JFXToolbar>
+                <leftItems>
+                    <!-- JFXRippler本质上是一个StackPane布局，
+                    在堆栈[后添加的节点会覆盖在先一个节点上]的基础上
+                    添加了点击附带Rippler水波效果
+                    maskType 水波形状 -->
+                    <JFXRippler
+                        maskType="CIRCLE">
+                        <!--JFXHamburger 是一个VBox, 可以实现带icon的效果 styleClass="jfx-hamburger" 默认是三个横线-->
+                        <JFXHamburger fx:id="drawerBurger" styleClass="jfx-hamburger">
+                            <!-- 在JFXHamburger中嵌套HamburgerBackArrowBasicTransition
+                                 当调用JFXHamburger.getAnimation方法的时候，可以开启动画，
+                                 把JFXHamburger的icon图标效果更改为HamburgerBackArrow-->
+                            <HamburgerBackArrowBasicTransition/>
+                        </JFXHamburger>
+                    </JFXRippler>
+                    <Label>Material Design</Label>
+                </leftItems>
+                <rightItems>
+                    <JFXRippler
+                            maskType="CIRCLE">
+                        <!--JFXHamburger 是一个VBox, 可以实现带icon的效果 styleClass="jfx-options-burger" 是三个竖点的效果 -->
+                        <JFXHamburger fx:id="optionsBurger" styleClass="jfx-options-burger">
+                        </JFXHamburger>
+                    </JFXRippler>
+                </rightItems>
+            </JFXToolbar>
+        </VBox>
+    </top>
+
+    <center>
+        <!-- 中间区域是一个JFXDrawer抽屉控件-->
+        <JFXDrawer fx:id="mainDrawer" defaultDrawerSize="250" direction="LEFT">
+            <styleClass>
+                <String fx:value="body"/>
+            </styleClass>
+        </JFXDrawer>
+    </center>
+
+</BorderPane>

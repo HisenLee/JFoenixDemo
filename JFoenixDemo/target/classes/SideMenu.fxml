@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXListView?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:id="root" >
+    <styleClass>
+        <String fx:value="side-menu"/>
+    </styleClass>
+
+    <JFXListView fx:id="sideListView">
+        <Label fx:id="button">Buttons</Label>
+        <Label fx:id="radiobutton">Radio Button</Label>
+        <Label fx:id="checkbox">Check Box</Label>
+        <Label fx:id="combobox">Combo Box</Label>
+        <Label fx:id="togglebutton">Toggle Button</Label>
+        <Label fx:id="textfield">Text Field</Label>
+        <Label fx:id="icons">Icons</Label>
+        <Label fx:id="progressbar">Progress Bar</Label>
+        <Label fx:id="spinner">Spinner</Label>
+        <Label fx:id="slider">Slider</Label>
+        <Label fx:id="dialogs">Dialogs &amp; Alert</Label>
+        <Label fx:id="popup">Popup</Label>
+        <Label fx:id="listview">List View</Label>
+        <Label fx:id="treetableview">Tree Table View</Label>
+        <Label fx:id="scrollpane">Header Scroll Pane</Label>
+        <Label fx:id="highlighter">Highlighter</Label>
+        <Label fx:id="chipview">Chip View</Label>
+        <Label fx:id="pickers">Pickers</Label>
+        <Label fx:id="nodesList">Nodes List</Label>
+        <Label fx:id="masonry">Masonry Layout</Label>
+        <Label fx:id="svgLoader">SVG Loader</Label>
+    </JFXListView>
+</StackPane>

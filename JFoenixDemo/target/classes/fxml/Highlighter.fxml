@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXDialogLayout?>
+<?import com.jfoenix.controls.JFXButton?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml">
+    <VBox maxWidth="400" maxHeight="300" spacing="20" alignment="CENTER">
+        <children>
+            <JFXTextField fx:id="searchField" promptText="Search for..."
+                          style="-fx-pref-width: 380px; -fx-max-width: 380px;"/>
+
+            <JFXDialogLayout fx:id="content"
+                             style="-fx-background-color: WHITE; -fx-background-radius: 3">
+                <heading>
+                    <Label>JFoenix Dialog</Label>
+                </heading>
+                <body>
+                    <Label>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat.
+                    </Label>
+                </body>
+                <actions>
+                    <JFXButton fx:id="acceptButton" styleClass="dialog-accept">ACCEPT
+                    </JFXButton>
+                </actions>
+            </JFXDialogLayout>
+        </children>
+    </VBox>
+</StackPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.geometry.Insets?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml">
+
+    <VBox spacing="50" alignment="BASELINE_CENTER" maxHeight="250">
+
+        <JFXProgressBar fx:id="progress1" progress="100"></JFXProgressBar>
+
+        <JFXProgressBar></JFXProgressBar>
+
+        <JFXProgressBar fx:id="progress2" styleClass="custom-jfx-progress-bar" progress="100"></JFXProgressBar>
+
+        <JFXProgressBar styleClass="custom-jfx-progress-bar"></JFXProgressBar>
+
+        <JFXProgressBar styleClass="custom-jfx-progress-bar-stroke"></JFXProgressBar>
+
+        <StackPane.margin>
+            <Insets>
+                <left>50</left>
+                <right>50</right>
+                <top>10</top>
+            </Insets>
+        </StackPane.margin>
+
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:id="root">
+
+    <!-- 垂直布局盒子-->
+    <VBox maxWidth="400" maxHeight="400" spacing="10">
+        <!-- 平面按钮 Flat Buttons-->
+        <Label styleClass="title-label">Flat Buttons</Label>
+        <!-- 水平布局盒子-->
+        <HBox spacing="20" style="-fx-padding: 0 0 0 50;">
+            <JFXButton prefWidth="100" prefHeight="40"
+                        buttonType="FLAT" text="BUTTON"
+                        style="-fx-font-size:14px;"/>
+            <JFXButton prefWidth="100" prefHeight="40" buttonType="FLAT" text="COLORED"
+                       style="-fx-text-fill:#5264AE;-fx-font-size:14px;"/>
+            <JFXButton prefWidth="100" prefHeight="40" buttonType="FLAT" text="DISABLED"
+                       style="-fx-font-size:14px;" disable="true"/>
+        </HBox>
+
+        <!-- 升起的三维按钮 Raised Buttons-->
+        <Label styleClass="title-label">Raised Buttons</Label>
+        <!-- 水平布局盒子-->
+        <HBox spacing="20" style="-fx-padding: 0 0 0 50;">
+            <JFXButton prefWidth="100" prefHeight="40" buttonType="RAISED" text="BUTTON"
+                       style="-fx-font-size:14px;-fx-background-color:WHITE;"/>
+            <JFXButton prefWidth="100" prefHeight="40" buttonType="RAISED" text="COLORED"
+                       style="-fx-text-fill:WHITE;-fx-background-color:#5264AE;-fx-font-size:14px;"/>
+            <JFXButton prefWidth="100" prefHeight="40" buttonType="RAISED" text="DISABLED"
+                       style="-fx-background-color:WHITE;-fx-font-size:14px;" disable="true"/>
+        </HBox>
+
+        <!-- 可自定义选项-->
+        <Label styleClass="title-label">Styling Options</Label>
+        <!-- 水平布局盒子-->
+        <HBox spacing="20" style="-fx-padding: 0 0 0 50;">
+            <JFXButton prefWidth="100" prefHeight="40" buttonType="RAISED" text="CUSTOM RIPPLER"
+                       styleClass="custom-jfx-button-raised"/>
+        </HBox>
+
+
+    </VBox>
+
+</StackPane>

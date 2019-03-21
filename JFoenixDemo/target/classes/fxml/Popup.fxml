@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml">
+
+    <!-- 锚点布局，控件设置好相对位置之后，位置不随着屏幕大小变化而变化-->
+    <AnchorPane styleClass="animated-burgers">
+
+        <JFXRippler fx:id="rippler1" maskType="CIRCLE"
+                    AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="100.0">
+            <JFXHamburger fx:id="burger1" style="-fx-padding:15;">
+            </JFXHamburger>
+        </JFXRippler>
+
+        <JFXRippler fx:id="rippler2" maskType="CIRCLE"
+                    AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+            <JFXHamburger fx:id="burger2" style="-fx-padding:15;">
+            </JFXHamburger>
+        </JFXRippler>
+
+        <JFXRippler fx:id="rippler3" maskType="CIRCLE"
+                    AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0">
+            <JFXHamburger fx:id="burger3" style="-fx-padding:15;">
+            </JFXHamburger>
+        </JFXRippler>
+
+        <JFXRippler fx:id="rippler4" maskType="CIRCLE"
+                    AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="100.0">
+            <JFXHamburger fx:id="burger4" style="-fx-padding:15;">
+            </JFXHamburger>
+        </JFXRippler>
+
+    </AnchorPane>
+
+</StackPane>

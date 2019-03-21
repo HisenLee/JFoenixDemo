@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           prefHeight="400.0" prefWidth="600.0">
+    <HBox spacing="100" maxWidth="400" maxHeight="300" alignment="BASELINE_CENTER">
+        <VBox spacing="40">
+            <children>
+
+                <Label styleClass="radio-button-title-label">Radio Buttons</Label>
+
+                <JFXRadioButton fx:id="radio_1" selected="true" text="Radio 1" styleClass="custom-jfx-radio-button">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup"/>
+                    </toggleGroup>
+                </JFXRadioButton>
+                <JFXRadioButton fx:id="radio_2" selected="false"
+                                text="Radio 2" toggleGroup="$toggleGroup" styleClass="custom-jfx-radio-button"/>
+                <JFXRadioButton fx:id="radio_3" selected="false"
+                                text="Radio 2" toggleGroup="$toggleGroup" styleClass="custom-jfx-radio-button"/>
+            </children>
+        </VBox>
+
+
+        <VBox spacing="40">
+            <children>
+
+                <Label styleClass="radio-button-title-label">Style Options</Label>
+
+                <JFXRadioButton fx:id="radio_11" text="Radio 1"
+                                styleClass="custom-jfx-radio-button, custom-jfx-radio-button-blue">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="toggleGroup2"/>
+                    </toggleGroup>
+                </JFXRadioButton>
+                <JFXRadioButton fx:id="radio_22" selected="true" text="Radio 2" toggleGroup="$toggleGroup"
+                                styleClass="custom-jfx-radio-button, custom-jfx-radio-button-red"/>
+                <JFXRadioButton fx:id="radio_33" text="Radio 2" toggleGroup="$toggleGroup"
+                                styleClass="custom-jfx-radio-button, custom-jfx-radio-button-green"/>
+            </children>
+        </VBox>
+
+    </HBox>
+</StackPane>

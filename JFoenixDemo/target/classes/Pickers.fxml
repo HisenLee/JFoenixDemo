@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<StackPane fx:id="root" xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml">
+
+    <VBox maxWidth="500" maxHeight="400">
+        <children>
+            <Label styleClass="title-label">Popup ups</Label>
+            <HBox spacing="40" style="-fx-padding: 0 0 0 50;">
+                <children>
+                    <JFXColorPicker minWidth="100"></JFXColorPicker>
+                    <JFXDatePicker></JFXDatePicker>
+                    <JFXTimePicker></JFXTimePicker>
+                </children>
+            </HBox>
+            <Label styleClass="title-label">Overylays</Label>
+            <HBox spacing="40" style="-fx-padding: 0 0 0 50;">
+                <children>
+                    <JFXDatePicker fx:id="dateOverlay" overLay="true"
+                                   styleClass="custom-color-picker"></JFXDatePicker>
+                    <JFXTimePicker fx:id="timeOverlay" overLay="true"
+                                   styleClass="custom-color-picker"></JFXTimePicker>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+
+</StackPane>
